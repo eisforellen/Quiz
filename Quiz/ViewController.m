@@ -48,11 +48,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) quizDone
+- (void)quizDone
 {
     // add what to do when the quiz ends
     if (self.runningQuiz.correctCount) {
-        self.statusLabel.text = [NSString stringWithFormat:@"Quiz Done - Score %d%%", self.runningQuiz.quizCount / self.runningQuiz.correctCount];
+        self.statusLabel.text = [NSString stringWithFormat:@"Quiz Done - Score %lu%%", self.runningQuiz.quizCount / self.runningQuiz.correctCount];
     } else {
         self.statusLabel.text = @"Quiz Done - Score 0%";
     }
@@ -60,12 +60,12 @@
     self.quizIndex = 999;
 }
 
-- (void) nextQuizItem {
+- (void)nextQuizItem {
     if (self.quizIndex == 999){
         self.quizIndex = 0;
         self.statusLabel.text = @"";
     } else if ((self.runningQuiz.quizCount-1) > self.quizIndex) {
-        self.quizIndex ++;
+        self.quizIndex++;
     } else {
         self.quizIndex = 0;
         self.statusLabel.text = @"";
@@ -115,7 +115,7 @@
             self.answer4Label.backgroundColor = [UIColor redColor];
         }
     }
-    self.statusLabel.text = [NSString stringWithFormat:@"Correct: %d Incorrect: %d", self.runningQuiz.correctCount, self.runningQuiz.incorrectCount];
+    self.statusLabel.text = [NSString stringWithFormat:@"Correct: %lu Incorrect: %lu", self.runningQuiz.correctCount, self.runningQuiz.incorrectCount];
     
     self.answer1Button.hidden = YES;
     self.answer2Button.hidden = YES;

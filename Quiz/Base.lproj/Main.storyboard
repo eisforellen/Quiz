@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name That Brewery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY2-En-z35">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name That Brewery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY2-En-z35">
                                 <rect key="frame" x="52" y="38" width="216" height="61"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,7 +34,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Answer 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyd-P6-3SM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyd-P6-3SM">
                                 <rect key="frame" x="43" y="245" width="235" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -44,12 +43,16 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpP-HW-H8Z">
                                 <rect key="frame" x="43" y="246" width="235" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LHF-d6-ks8"/>
+                                    <constraint firstAttribute="width" constant="235" id="YZc-MQ-qEV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <connections>
                                     <action selector="ans1Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zId-BO-xY8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Answer 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghv-MX-oMQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghv-MX-oMQ">
                                 <rect key="frame" x="43" y="309" width="235" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -58,11 +61,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZe-tx-QHd">
                                 <rect key="frame" x="43" y="309" width="235" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="fqM-2Q-M70"/>
+                                    <constraint firstAttribute="height" constant="50" id="oPz-1k-wba"/>
+                                </constraints>
                                 <connections>
                                     <action selector="ans2Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEx-Lx-Y3W"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Answer 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTe-s5-MWX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTe-s5-MWX">
                                 <rect key="frame" x="43" y="374" width="235" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -71,17 +78,38 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1C-UX-e5z">
                                 <rect key="frame" x="43" y="374" width="235" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Vuo-zj-V7d"/>
+                                    <constraint firstAttribute="width" constant="235" id="zgd-kl-0zb"/>
+                                </constraints>
                                 <connections>
                                     <action selector="ans3Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUy-xj-S9T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Correct: Incorrect:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubx-yy-ZGj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79C-H8-9Kz">
+                                <rect key="frame" x="43" y="438" width="235" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYz-we-r1n">
+                                <rect key="frame" x="43" y="438" width="235" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="XBA-DY-vYh"/>
+                                    <constraint firstAttribute="height" constant="50" id="dNd-np-4wl"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="ans4Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEQ-Dk-iTG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct: Incorrect:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubx-yy-ZGj">
                                 <rect key="frame" x="65" y="206" width="191" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVS-OR-SPU">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVS-OR-SPU">
                                 <rect key="frame" x="181" y="497" width="97" height="44"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Next">
@@ -91,46 +119,8 @@
                                     <action selector="startAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7t-zy-ZZV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Answer 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79C-H8-9Kz">
-                                <rect key="frame" x="43" y="438" width="235" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYz-we-r1n">
-                                <rect key="frame" x="43" y="438" width="235" height="50"/>
-                                <connections>
-                                    <action selector="ans4Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEQ-Dk-iTG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="TYz-we-r1n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2kO-pW-INg"/>
-                            <constraint firstItem="ghv-MX-oMQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4mx-B6-aSr"/>
-                            <constraint firstItem="jTe-s5-MWX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6aS-LU-B3W"/>
-                            <constraint firstItem="79C-H8-9Kz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6zj-CG-Mdt"/>
-                            <constraint firstItem="Ye3-KW-5qk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uY2-En-z35" secondAttribute="bottom" constant="20" id="CeN-2h-h6V"/>
-                            <constraint firstItem="79C-H8-9Kz" firstAttribute="top" secondItem="k1C-UX-e5z" secondAttribute="bottom" constant="14" id="Edh-Uf-dj6"/>
-                            <constraint firstItem="k1C-UX-e5z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FOv-Te-pTa"/>
-                            <constraint firstItem="Ye3-KW-5qk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mew-lq-f6B"/>
-                            <constraint firstItem="ubx-yy-ZGj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="45" id="Qgg-4S-R3w"/>
-                            <constraint firstItem="VpP-HW-H8Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TH8-7L-o6v"/>
-                            <constraint firstItem="Ye3-KW-5qk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UO6-vr-ZBw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uY2-En-z35" secondAttribute="trailing" constant="32" id="UZo-ve-Ewi"/>
-                            <constraint firstItem="NZe-tx-QHd" firstAttribute="top" secondItem="VpP-HW-H8Z" secondAttribute="bottom" constant="14" id="bfv-YX-0kK"/>
-                            <constraint firstItem="eVS-OR-SPU" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="gdC-21-XDQ"/>
-                            <constraint firstItem="uY2-En-z35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="lcg-ni-ESH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ubx-yy-ZGj" secondAttribute="trailing" constant="44" id="mPz-8d-Sb1"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eVS-OR-SPU" secondAttribute="bottom" constant="35" id="nxl-bK-eFe"/>
-                            <constraint firstItem="NZe-tx-QHd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="orG-ZR-0FT"/>
-                            <constraint firstItem="eVS-OR-SPU" firstAttribute="top" secondItem="TYz-we-r1n" secondAttribute="bottom" constant="14" id="sYv-nC-Uij"/>
-                            <constraint firstItem="uY2-En-z35" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="szy-YQ-iYV"/>
-                            <constraint firstItem="Jyd-P6-3SM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tE9-uT-glk"/>
-                            <constraint firstItem="ubx-yy-ZGj" firstAttribute="top" secondItem="Ye3-KW-5qk" secondAttribute="bottom" constant="12" id="yug-q0-J12"/>
-                            <constraint firstItem="k1C-UX-e5z" firstAttribute="top" secondItem="NZe-tx-QHd" secondAttribute="bottom" constant="14" id="zCH-Cx-4ty"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="answer1Button" destination="VpP-HW-H8Z" id="h1r-PK-Iho"/>
