@@ -53,6 +53,11 @@
     // add what to do when the quiz ends
     if (self.runningQuiz.correctCount) {
         self.statusLabel.text = [NSString stringWithFormat:@"Quiz Done - Score %lu%%", self.runningQuiz.quizCount / self.runningQuiz.correctCount];
+        self.answer1Label.hidden = YES;
+        self.answer2Label.hidden = YES;
+        self.answer3Label.hidden = YES;
+        self.answer4Label.hidden = YES;
+        self.questionLabel.hidden = YES;
     } else {
         self.statusLabel.text = @"Quiz Done - Score 0%";
     }
@@ -70,8 +75,10 @@
         self.quizIndex = 0;
         self.statusLabel.text = @"";
     }
-    if (self.runningQuiz.quizCount >= self.quizIndex + 1) {
+    // removed +1 after self.quizIndex
+    if (self.runningQuiz.quizCount > self.quizIndex+1) {
         [self.runningQuiz nextQuestion: self.quizIndex];
+        NSLog(@"%li", (long)self.quizIndex);
         self.questionLabel.text = self.runningQuiz.beers;
         self.answer1Label.text = self.runningQuiz.ans1;
         self.answer2Label.text = self.runningQuiz.ans2;
